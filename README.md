@@ -1,3 +1,3 @@
-# HTML and CSS 2023
+# SQ Group6
 
-This is my personal project staring code for the first time.
+This is SQ Group 6's web application project 'FoodSaver'.
