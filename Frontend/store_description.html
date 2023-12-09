@@ -74,10 +74,11 @@
 
 .menu-section {
     padding: 20px; /* 패딩 추가 */
-    font-family: Arial, sans-serif; /* 메뉴 섹션의 글꼴 설정 */
+    
 }
 
 .menu-section-title {
+    font-family: Arial, sans-serif; /* 메뉴 섹션의 글꼴 설정 */
     font-size: 1.5rem; /* 섹션 타이틀 크기 */
     margin-bottom: 5px; /* 아래쪽 여백 */
     text-align: left; /* 가운데 정렬 */
@@ -88,6 +89,10 @@
     display: flex; /* Flexbox를 사용하여 아이템을 한 줄에 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
     padding: 10px 0; /* 상하 패딩 */
+}
+
+.menu-item-description {
+    flex-grow: 1;
 }
 
 .menu-item-image {
@@ -112,7 +117,7 @@
 .menu-item-pricing {
     display: flex; /* 가격 정보를 세로로 쌓기 위해 flex-direction 변경 */
     flex-direction: column; /* 세로 정렬 */
-    align-items: flex-start; 
+    align-items: flex-end;
 }
 
 .menu-item-original-price {
@@ -128,7 +133,6 @@
     font-weight: 600;
     align-items: center; /* 세로 중앙 정렬 */
     font-size: large;
-    justify-content: flex-end;
 }
 
 .menu-item-add-btn {
