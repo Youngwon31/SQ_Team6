@@ -11,22 +11,27 @@ $db = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
 // 연결 확인
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
+} else {
+    echo "Connected successfully";
 }
 
 // POST 요청에서 데이터 수집 및 정제
-$formUsername = $db->real_escape_string($_POST['username']);
-$formEmail = $db->real_escape_string($_POST['email']); // 이메일 추가
-$formPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-// 데이터베이스에 사용자 정보 삽입
-$query = "INSERT INTO users (username, email, password) VALUES ('$formUsername', '$formEmail', '$formPassword')";
-if ($db->query($query) === TRUE) {
-    // JSON 응답을 반환
-    echo json_encode(['success' => true, 'message' => 'Signup successful']);
+// POST 요청에서 데이터 수집 및 정제
+if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
+    $formUsername = $db->real_escape_string(trim($_POST['username']));
+    $formEmail = $db->real_escape_string(trim($_POST['email']));
+    $formPassword = $db->real_escape_string(trim($_POST['password']));
+    // 데이터베이스에 사용자 정보 삽입
+    $query = "INSERT INTO users (username, email, password) VALUES ('$formUsername', '$formEmail', '$formPassword')";
+    if ($db->query($query) === TRUE) {
+        echo "Signup successful";
+    } else {
+        echo "Error: " . $query . "<br>" . $db->error;
+    }
 } else {
-    // 오류 메시지를 JSON으로 반환
-    echo json_encode(['success' => false, 'message' => "Error: " . $query . "<br>" . $db->error]);
+    echo "Missing required post data";
 }
+
 
 // 데이터베이스 연결 종료
 $db->close();
