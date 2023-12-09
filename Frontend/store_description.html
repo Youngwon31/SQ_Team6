@@ -242,6 +242,20 @@
 
     <!-- Repeat for other menu items -->
 </div>
+<div class="home-bar">
+    <div class="home-bar__column" onclick="goToHome()"> 
+        <img src="img\home-selected.png">
+    </div>
+    <div class="home-bar__column" onclick="goToFavorites()">
+        <img src="img\favorite.png">
+    </div>
+    <div class="home-bar__column" onclick="goToCart()"> 
+        <img src="img\cart.png">
+    </div>
+    <div class="home-bar__column" onclick="goToAccount()"> 
+        <img src="img\account.png">
+    </div>
+</div>
 <!-- End of Menu Section -->
 
 
@@ -250,5 +264,22 @@
     
 
     <script src="https://kit.fontawesome.com/bc37af81b3.js" crossorigin="anonymous"></script>
+    <script>
+        function goToHome() {
+            window.location.href = "home.html";
+        }
+        function goToFavorites() {
+            window.location.href = "favorites.html";
+        }
+
+        function goToCart() {
+            window.location.href = "cart.html";
+        }
+
+        function goToAccount() {
+            window.location.href = "account.html";
+        }
+
+    </script>
 </body>
 </html>
