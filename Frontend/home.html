@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | FRESHSAVER</title>
+</head>
+<style>
+    .app-header {
+        background-color: #fff;
+        padding: 0rem 1rem 0rem 1rem;
+        text-align: left;
+    }
+
+    .maps-and-flags {
+        max-width: 3%;
+        height: auto;
+    }
+
+    .arrow-point-to-down {
+        max-width: 2.5%;
+        margin-left: 3px;
+    }
+
+    .search-bar {
+        position: relative;
+        margin-top: 25px;
+        max-width: 80%;
+    }
+
+    .search-bar input[type="search"]{
+
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 10px 230px 10px 30px;
+        background-image: url('img/search.png');
+        background-position: 10px center;
+        background-size: 13px;
+        background-repeat: no-repeat;
+        margin: 10px; 
+        margin-bottom: 90px;
+        display: block;
+    }
+
+    .category-menu {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .category-menu :nth-child(1) {
+        background-image: url('img/grocery.png');
+        background-position: center;
+        background-size: 75px;
+        background-repeat: no-repeat;
+        padding: 100px 40px 0px 30px;
+        color: black;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .category-menu :nth-child(2) {
+        background-image: url('img/convenience.png');
+        background-position: center;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        padding: 100px 40px 0px 30px;
+        color: black;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .category-menu :nth-child(3) {
+        background-image: url('img/restaurant.png');
+        background-position: center;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        padding: 100px 40px 0px 30px;
+        color: black;
+        font-weight: 600;
+        text-decoration: none;  
+    }
+
+    .filter-button {
+        background-image: url('img/arrow-point-to-down.png');
+        background-position: right 5px center;
+        background-size: 10px;
+        background-repeat: no-repeat;
+        padding: 5px 17px 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+    }
+
+    .filter-button:active {
+        background-color: #ddd; 
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+        width: 100%; 
+        margin-left: 2rem;
+    }
+
+    .card {
+        background-color: #fff; /* 카드의 배경색 */
+        border-radius: 25px; /* 둥근 모서리 */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+        overflow: hidden; /* 내용이 넘칠 경우 숨깁니다. */
+        width: 83%;
+        position: relative;
+    
+    }
+
+    button.card {
+        border: none;
+        padding: 0;
+        background: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .card-stock-info {
+        position: absolute;
+        top: 10px; /* 상단에서 10px 떨어진 위치 */
+        left: 10px; /* 왼쪽에서 10px 떨어진 위치 */
+        background-color: rgb(247, 255, 140); /* 배경 색상 설정 */
+        color: black; /* 글자 색상을 흰색으로 설정 */
+        padding: 5px 10px; /* 패딩 설정 */
+        border-radius: 20px; /* 둥근 모서리 */
+        font-weight: 600; /* 글자 두께 */
+        
+    }
+
+    /* 카드 내용을 위한 스타일 */
+    .card-content {
+        display: flex; /* 카드 컨텐츠를 flex 컨테이너로 만듭니다 */
+        padding: 0.5rem; /* 컨텐츠에 패딩 추가 */
+    }
+
+    .card-text-content {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px; /* 수정: 제목과 설명 사이의 간격 조절 */
+        margin-left: 7px;
+    }
+
+    .card img {
+        width: 100%; /* 이미지가 카드의 전체 너비를 사용하도록 설정 */
+        display: block; /* 이미지를 블록 요소로 설정 */
+    }
+
+    /* 카드 제목과 설명을 위한 스타일 */
+    .card-title {
+        font-size: 1rem; /* 제목의 폰트 크기를 설정합니다. */
+        margin: 0;
+    }
+
+    .card-description {
+        font-size: 0.875rem; /* 설명의 폰트 크기를 설정합니다. */
+        font-weight: 600;
+        color: #666; /* 설명의 색상을 설정합니다. */
+        margin: 5px 0;
+    }
+
+    .card-pricing {
+        text-align: right;
+        margin-top: 7px;
+        margin-right: 7px;
+    }
+    
+
+    .original-price {
+        text-decoration: line-through; /* 취소선 */
+        color: #666; /* 글자 색상 */
+        
+    }
+
+    .discounted-price {
+        color: balck; /* 할인된 가격의 글자색상 */
+        font-weight: bold; /* 글자 두께를 굵게 */
+        font-size: 1.15rem;
+    }
+        
+
+
+
+</style>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column"> 
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>9:41</span>
+        </div>
+        <div class="status-bar__column"> 
+            <span>11%</span>
+            <i class="fa-solid fa-battery-quarter fa-2x"></i>
+        </div>
+    </div>
+    <header class="app-header">
+        <div class="location-selector">
+            <img src="img\maps-and-flags.png" class="maps-and-flags">
+            <span>108 University Ave</span>
+            <img src="img\arrow-point-to-down.png" class="arrow-point-to-down">
+        </div>
+        <div class="search-bar">
+            <input type="search" placeholder="Search FreshSaver">
+        </div>
+        <nav class="category-menu">
+            <a href="#" class="category-item">Grocery</a>
+            <a href="#" class="category-item">Convenience</a>
+            <a href="#" class="category-item">Restaurant</a>
+        </nav>
+        <div class="filter-bar">
+            <button class="filter-button">Pick-up time</button>
+            <button class="filter-button">Food types</button>
+        </div>
+    </header>
+    
+    <main class="content">
+        <section class="recommendation-section">
+            <h2>Recommended for you</h2>
+            <div class="products-grid">
+                <form action="store_description.html" method="get">
+                    <button type="submit" class="card">
+                        <div class="card-stock-info">3 left</div>
+                        <img src="img/owl.jpeg">
+                        <div class="card-content">
+                            <div class="card-text-content">
+                                <h3 class="card-title">The Owl of Minerva - 255 King St</h3>
+                                <p class="card-description">Kamjatang</p>
+                            </div>
+                            <div class="card-pricing">
+                                <span class="original-price">was $17.99</span>
+                                <span class="discounted-price">$8.99</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="new-stores-section">
+            <h2>New stores</h2>
+            <div class="products-grid">
+                <form action="store_description.html" method="get">
+                    <button type="submit" class="card">
+                        <div class="card-stock-info">1 left</div>
+                        <img src="img/seven-eleven.jpg">
+                        <div class="card-content">
+                            <div class="card-text-content">
+                                <h3 class="card-title">7-Eleven - 256 King ST</h3>
+                                <p class="card-description">Baked Goods</p>
+                            </div>
+                            <div class="card-pricing">
+                                <span class="original-price">was $12.99</span>
+                                <span class="discounted-price">$4.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <div class="home-bar">
+            <div class="home-bar__column" onclick="goToHome()"> 
+                <img src="img\home-selected.png">
+            </div>
+            <div class="home-bar__column" onclick="goToFavorites()">
+                <img src="img\favorite.png">
+            </div>
+            <div class="home-bar__column" onclick="goToCart()"> 
+                <img src="img\cart.png">
+            </div>
+            <div class="home-bar__column" onclick="goToAccount()"> 
+                <img src="img\account.png">
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/bc37af81b3.js" crossorigin="anonymous"></script>
+    <script>
+        function goToHome() {
+            window.location.href = "home.html";
+        }
+        function goToFavorites() {
+            window.location.href = "favorites.html";
+        }
+
+        function goToCart() {
+            window.location.href = "cart.html";
+        }
+
+        function goToAccount() {
+            window.location.href = "account.html";
+        }
+
+    </script>
+</body>
+</html>

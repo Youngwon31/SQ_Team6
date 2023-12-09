@@ -1,5 +1,4 @@
 .status-bar {
-    position: sticky;
     top: 0;
     width: 100%;
     box-sizing: border-box;
@@ -8,7 +7,7 @@
     padding: 5px 3px;
     font-weight: bold;
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .status-bar__column {

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Description | FRESHSAVER</title>
+    <style>
+
+
+.store-header {
+    display: flex; /* Flexbox를 사용해서 자식 요소들을 정렬합니다. */
+    flex-direction: column; /* 자식 요소들을 세로로 쌓습니다. */
+    align-items: center; /* 가로 방향으로 중앙 정렬합니다. */
+    justify-content: center; /* 세로 방향으로 중앙 정렬합니다. */
+    font-weight: 600;
+    position: relative;
+}
+
+.store-info { /* 제목과 재고 정보를 포함할 새로운 컨테이너 */
+    display: flex; /* Flexbox를 사용해서 자식 요소들을 정렬합니다. */
+    align-items: center; /* 자식 요소들을 세로로 중앙 정렬합니다. */
+    justify-content: center; /* 자식 요소들을 가로로 중앙 정렬합니다. */
+    gap: 10px; /* 제목과 재고 정보 사이에 간격을 줍니다. (선택사항) */
+}
+
+.store-image {
+    max-width: 100%;
+}
+
+.store-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.card-stock-info {
+    background-color: rgb(247, 255, 140);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.star-rating {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.divider {
+    border-top: 1px solid black;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.pick-up,
+.address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.time,
+.maps-and-flags {
+    max-width: 3%;
+    max-height: 3%;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+
+
+.menu-section {
+    padding: 20px; /* 패딩 추가 */
+    font-family: Arial, sans-serif; /* 메뉴 섹션의 글꼴 설정 */
+}
+
+.menu-section-title {
+    font-size: 1.5rem; /* 섹션 타이틀 크기 */
+    margin-bottom: 5px; /* 아래쪽 여백 */
+    text-align: left; /* 가운데 정렬 */
+    font-weight: 600;
+}
+
+.menu-item {
+    display: flex; /* Flexbox를 사용하여 아이템을 한 줄에 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 10px 0; /* 상하 패딩 */
+}
+
+.menu-item-image {
+    max-width: 20%; /* 이미지 크기 조정 */
+    max-height: 20%; /* 이미지 크기 조정 */
+    object-fit: cover; /* 이미지 비율 유지 */
+    margin-right: 10px; /* 오른쪽 여백 설정 */
+}
+
+.drink-image {
+    max-width: 20%;
+}
+
+.menu-item-title {
+    margin-bottom: 5px;
+}
+
+.menu-item-details {
+    margin: 0px;
+
+}
+.menu-item-pricing {
+    display: flex; /* 가격 정보를 세로로 쌓기 위해 flex-direction 변경 */
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; 
+}
+
+.menu-item-original-price {
+    font-size: small;
+    color: #666; /* 글자 색상 */
+    text-decoration: line-through; /* 취소선 */
+}
+
+
+
+.current-price-and-button {
+    display: flex; /* 현재 가격과 버튼을 한 줄에 정렬 */
+    font-weight: 600;
+    align-items: center; /* 세로 중앙 정렬 */
+    font-size: large;
+    justify-content: flex-end;
+}
+
+.menu-item-add-btn {
+    margin-left: 10px; /* 버튼과 가격 사이 여백 설정 */
+    background: black; /* 배경색 */
+    border: none; /* 테두리 없애기 */
+    color: white; /* 글자색 */
+    font-size: 1.5rem; /* 버튼 글자 크기 */
+    border-radius: 50%; /* 원형 버튼 */
+    cursor: pointer; /* 커서 모양 변경 */
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column"> 
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>9:41</span>
+        </div>
+        <div class="status-bar__column"> 
+            <span>11%</span>
+            <i class="fa-solid fa-battery-quarter fa-2x"></i>
+        </div>
+    </div>
+
+    <div class="store-header">
+        <img src="img/owl.jpeg" alt="Store Image" class="store-image">
+        <div class="store-info">
+            <div class="store-title">The Owl of Minerva</div>
+            <div class="card-stock-info">3 left</div>
+            
+        </div>
+        <div class="star-rating">4.8★</div>
+        
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="pick-up">
+        <img src="img\time.png" class="time">
+        <div>Pick up: 9:00 PM - 11:00 PM</div>
+        
+    </div>
+
+    <div class="address">
+        <img src="img\maps-and-flags.png" class="maps-and-flags">
+        <div>255 King St N #11</div>
+
+
+    </div>
+
+
+    <!-- Menu Section -->
+<div class="menu-section">
+    <span class="menu-section-title">Menu</span>
+    <!-- Menu Item -->
+    <div class="menu-item">
+        <img src="img/kamjatang.png" alt="Menu Item Image" class="menu-item-image">
+        <div class="menu-item-description">
+            <h3 class="menu-item-title">Kamjatang (Pork Bone Soup)</h3>
+            <p class="menu-item-details">Pork bone and potato soup</p>
+            <p class="menu-item-details">Include a bowl of rice</p>
+        
+        </div>
+       
+        <div class="menu-item-pricing">
+            <div class="price-and-discount">
+                <span class="menu-item-original-price">was $17.99</span>
+                
+            </div>
+            <div class="current-price-and-button">
+                <span class="menu-item-price">$8.99</span>
+                <button class="menu-item-add-btn">+</button>
+            </div>
+        </div>
+    </div>
+
+
+    <span class="menu-section-title">Side & Drinks</span>
+    <!-- Menu Item -->
+    <div class="menu-item">
+        <img src="img/drink.png" alt="Drink Image" class="drink-image">
+        <div class="menu-item-description">
+            <h3 class="menu-item-title">Sac Sac Grape (238ml)</h3>
+            <p class="menu-item-details">Grape beverage</p>
+            <p class="menu-item-details">Shake before drinking</p>
+        </div>
+       
+        
+            <div class="current-price-and-button">
+                <span class="menu-item-price">$3.50</span>
+                <button class="menu-item-add-btn">+</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Repeat for other menu items -->
+</div>
+<!-- End of Menu Section -->
+
+
+
+
+    
+
+    <script src="https://kit.fontawesome.com/bc37af81b3.js" crossorigin="anonymous"></script>
+</body>
+</html>
