@@ -114,6 +114,13 @@
     
     }
 
+    .favorite {
+        position: relative;
+        display: flex;
+        max-width: 5%;
+
+    }
+
     button.card {
         border: none;
         padding: 0;
@@ -150,6 +157,7 @@
     .card img {
         width: 100%; /* 이미지가 카드의 전체 너비를 사용하도록 설정 */
         display: block; /* 이미지를 블록 요소로 설정 */
+     
     }
 
     /* 카드 제목과 설명을 위한 스타일 */
@@ -229,7 +237,8 @@
                 <form action="store_description.html" method="get">
                     <button type="submit" class="card">
                         <div class="card-stock-info">3 left</div>
-                        <img src="img/owl.jpeg">
+                        <img src="img/owl.jpeg" class="owl">
+                        
                         <div class="card-content">
                             <div class="card-text-content">
                                 <h3 class="card-title">The Owl of Minerva - 255 King St</h3>
