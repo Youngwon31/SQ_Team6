@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | FRESHSAVER</title>
+    <style>
+        /* 스타일 초기화 */
+        body, h1, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        /* 전체 페이지의 폰트 설정 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        /* 헤더 섹션 스타일 */
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 사용자 이름 스타일 */
+        .user-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* 아이콘 스타일 */
+        .user-icon {
+            font-size: 2rem; /* 아이콘 크기 조정 */
+            margin-bottom: 30px;
+        }
+
+        /* 메뉴 리스트 스타일 */
+        .menu-list {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .menu-list li {
+            padding: 10px 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon {
+            font-size: 1.5rem; /* 메뉴 아이콘 크기 */
+            margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
+        }
+
+        /* 하단 바 스타일 */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #f2f2f2;
+        }
+
+        .bottom-bar img {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 class="user-name">John Smith</h1>
+        <div class="user-icon">&#128100;</div> <!-- 예시 아이콘, 실제 아이콘으로 교체 필요 -->
+    </div>
+
+    <ul class="menu-list">
+        <li><span class="menu-icon">&#128179;</span> Wallet</li>
+        <li><span class="menu-icon">&#128722;</span> Orders</li>
+        <li><span class="menu-icon">&#9881;</span> Settings</li>
+        <li><span class="menu-icon">&#10067;</span> Help Center</li>
+        <li><span class="menu-icon">&#128275;</span> Legal</li>
+        <li><span class="menu-icon">&#128101;</span> Invite Friends</li>
+    </ul>
+
+    <div class="home-bar">
+        <div class="home-bar__column" onclick="goToHome()"> 
+            <img src="img\home-selected.png">
+        </div>
+        <div class="home-bar__column" onclick="goToFavorites()">
+            <img src="img\favorite.png">
+        </div>
+        <div class="home-bar__column" onclick="goToCart()"> 
+            <img src="img\cart.png">
+        </div>
+        <div class="home-bar__column" onclick="goToAccount()"> 
+            <img src="img\account.png">
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/bc37af81b3.js" crossorigin="anonymous"></script>
+    <script>
+        function goToHome() {
+            window.location.href = "home.html";
+        }
+        function goToFavorites() {
+            window.location.href = "favorites.html";
+        }
+
+        function goToCart() {
+            window.location.href = "cart.html";
+        }
+
+        function goToAccount() {
+            window.location.href = "account.html";
+        }
+
+    </script>
+
+</body>
+</html>
