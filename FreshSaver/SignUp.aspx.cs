@@ -24,7 +24,7 @@ namespace FreshSaver
             // Password hashing
             // string hashedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
 
-            string connectionString = "Server=localhost; Database=UserDB; Uid=root;Pwd=0000;";
+            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=0000;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
