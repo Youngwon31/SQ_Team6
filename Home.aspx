@@ -30,7 +30,9 @@
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="store-item">
-                            <img src='<%# Eval("ImageURL") %>' alt='<%# Eval("StoreName") %>' class="store-image"/>
+                            <asp:LinkButton ID="lnkStore" runat="server" CommandArgument='<%# Eval("StoreID") %>' OnCommand="StoreSelected">
+                                <img src='<%# Eval("ImageURL") %>' alt='<%# Eval("StoreName") %>' class="store-image"/>
+                            </asp:LinkButton>
                             <div class="store-description">
                                 <span class="store-name"><%# Eval("StoreName") %> - <%# Eval("Address") %></span>
                                 <span class="menu-item-name"><%# Eval("MenuName") %></span>
@@ -49,7 +51,9 @@
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="store-item">
-                            <img src='<%# Eval("ImageURL") %>' alt='<%# Eval("StoreName") %>' class="store-image"/>
+                            <asp:LinkButton ID="lnkStore" runat="server" CommandArgument='<%# Eval("StoreID") %>' OnCommand="StoreSelected">
+                                <img src='<%# Eval("ImageURL") %>' alt='<%# Eval("StoreName") %>' class="store-image"/>
+                            </asp:LinkButton>
                             <div class="store-description">
                                 <span class="store-name"><%# Eval("StoreName") %> - <%# Eval("Address") %></span>
                                 <span class="menu-item-name"><%# Eval("MenuName") %></span>

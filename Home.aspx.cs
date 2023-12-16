@@ -26,6 +26,11 @@ namespace FreshSaver
             LoadNewStores(category);
         }
 
+        protected void StoreSelected(object sender, CommandEventArgs e)
+        {
+            string storeId = e.CommandArgument.ToString();
+            Response.Redirect($"StoreDescription.aspx?StoreID={storeId}");
+        }
 
 
         private void LoadRecommendedStores(string category)
@@ -104,14 +109,37 @@ namespace FreshSaver
         {
             string searchQuery = txtSearch.Text.Trim();
 
-            string searchStoresQuery = $@"SELECT s.StoreName, s.Address, s.ImageURL,
-        (SELECT mi.MenuName FROM MenuItems mi WHERE mi.StoreID = s.StoreID LIMIT 1) AS MenuName,
-        (SELECT mi.OriginalPrice FROM MenuItems mi WHERE mi.StoreID = s.StoreID LIMIT 1) AS OriginalPrice,
-        (SELECT mi.DiscountedPrice FROM MenuItems mi WHERE mi.StoreID = s.StoreID LIMIT 1) AS DiscountedPrice
-        FROM Stores s
-        WHERE s.StoreName LIKE @searchQuery OR s.Address LIKE @searchQuery;";
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                // 검색 쿼리를 데이터베이스에 전달하고 결과를 가져옵니다.
+                // 여기서는 예시로 하나의 결과만 가져오는 것으로 가정합니다.
+                // 데이터베이스 연결 및 쿼리 실행 코드를 작성하세요.
 
-            BindDataToRepeater(StoresRepeater, searchStoresQuery, "@searchQuery", "%" + searchQuery + "%");
+                // 예시 쿼리:
+                string query = @"SELECT StoreID FROM Stores 
+                         WHERE StoreName LIKE @searchQuery 
+                         OR Address LIKE @searchQuery 
+                         LIMIT 1;";
+
+                using (var conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@searchQuery", "%" + searchQuery + "%");
+                        var result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            // 결과가 있으면 StoreDescription.aspx로 리디렉션합니다.
+                            Response.Redirect($"StoreDescription.aspx?StoreID={result}");
+                        }
+                        else
+                        {
+                            // 검색 결과가 없으면 사용자에게 알림을 줍니다. (예: 레이블에 메시지 표시)
+                        }
+                    }
+                }
+            }
         }
 
         protected void CategorySelected(object sender, CommandEventArgs e)
