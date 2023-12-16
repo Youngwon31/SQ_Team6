@@ -24,15 +24,6 @@ namespace FreshSaver
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblStoreName 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblStoreName;
-
-        /// <summary>
         /// imgStoreImage 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -42,48 +33,66 @@ namespace FreshSaver
         protected global::System.Web.UI.WebControls.Image imgStoreImage;
 
         /// <summary>
+        /// lblStoreName 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStoreName;
+
+        /// <summary>
         /// lblAddress 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblAddress;
+        protected global::System.Web.UI.WebControls.Label lblAddress;
 
         /// <summary>
-        /// lblMenuName 컨트롤입니다.
+        /// MenuItemsRepeater 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMenuName;
+        protected global::System.Web.UI.WebControls.Repeater MenuItemsRepeater;
 
         /// <summary>
-        /// lblDescription 컨트롤입니다.
+        /// lblStockMessage 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblDescription;
+        protected global::System.Web.UI.WebControls.Label lblStockMessage;
 
         /// <summary>
-        /// lblOriginalPrice 컨트롤입니다.
+        /// lblTotalCost 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblOriginalPrice;
+        protected global::System.Web.UI.WebControls.Label lblTotalCost;
 
         /// <summary>
-        /// lblDiscountedPrice 컨트롤입니다.
+        /// lblTotalQuantity 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblDiscountedPrice;
+        protected global::System.Web.UI.WebControls.Label lblTotalQuantity;
+
+        /// <summary>
+        /// btnShoppingCart 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnShoppingCart;
     }
 }
