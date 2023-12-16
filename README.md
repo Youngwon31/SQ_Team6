@@ -1,3 +1,4 @@
-# SQ Group6
+#Home
 
-This is SQ Group 6's web application project 'FoodSaver'.
+1. Modify Web.config code
+2. In Mysql, Create DB and tables using an uploaded query file
