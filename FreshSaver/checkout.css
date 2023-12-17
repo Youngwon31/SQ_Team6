@@ -1,0 +1,65 @@
+﻿
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	font-family: 'Arial', sans-serif; 
+	background-color: #fff; 
+	color: #333; 
+}
+
+
+div {
+	max-width: 600px; 
+	background-color: #f7f7f7; 
+	padding: 20px; 
+	margin: 20px auto; 
+	border-radius: 8px; 
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+h2, h3 {
+	color: #333; 
+	margin: 0.5em 0;
+	text-align: center; 
+}
+
+
+#rblPaymentOptions {
+	margin: 1em 0; 
+}
+
+
+input[type="text"], input[type="password"] {
+	width: 100%; 
+	padding: 10px; 
+	margin-bottom: 10px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+}
+
+
+span[id^="rfv"], span[id^="regex"], span[id^="cv"] {
+	color: #e74c3c; 
+	display: block; 
+	margin-bottom: 10px; 
+}
+
+
+#btnCheckout, .return-to-home-button {
+	background-color: #2ecc71; 
+	color: white; 
+	padding: 15px 20px; 
+	border: none; 
+	border-radius: 20px; 
+	font-size: 1.2em; 
+	width: 100%; 
+	cursor: pointer; 
+	margin-top: 20px; 
+}
+
+

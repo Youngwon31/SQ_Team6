@@ -1,0 +1,177 @@
+﻿﻿ /*login*/
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.responsive-image {
+    width: 60%;
+    height: auto;
+}
+
+input[type=text], input[type=password] {
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: transparent;
+    outline: none;
+}
+
+    input[type=text]:focus, input[type=password]:focus {
+        border-bottom: 2px solid black;
+    }
+
+button {
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+
+    button:hover {
+        opacity: 1;
+    }
+
+.remember-me-container {
+    color: grey;
+    margin-top: 15px;
+}
+
+#errorMessage {
+    margin-top: 15px;
+}
+
+.signup-link {
+    color: grey;
+    margin-top: 7rem;
+}
+
+/*signup*/
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+input[type=text], input[type=password], input[type=email], .password-input {
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: transparent;
+    outline: none;
+}
+
+    input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+        border-bottom: 2px solid black;
+    }
+
+#passwordStrengthIndicator {
+    text-align: left;
+    margin-top: 5px;
+}
+
+#passwordStrength {
+    font-weight: bold;
+}
+
+
+
+/*home*/
+.home-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.search-bar {
+    margin: 20px 0;
+}
+
+.category-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.category-icon {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.store-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-description {
+    padding: 10px;
+}
+
+.store-name {
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: grey;
+}
+
+
+@media screen and (max-width: 768px) {
+    .login-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .home-container {
+        padding: 10px;
+    }
+
+    .category-container {
+        align-items: center;
+    }
+
+    .category-icon {
+        margin-bottom: 10px;
+    }
+
+    .product-item {
+    }
+}

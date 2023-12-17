@@ -1,0 +1,73 @@
+﻿/* login.css */
+
+body, html {
+	height: 100%; /* full height */
+	margin: 0; /* no margins */
+	font-family: Arial, sans-serif; /* font style */
+	background: white; /* white background */
+	display: flex; /* flex display */
+	align-items: center; /* vertically center items  */
+	justify-content: center; /* horizontally center items  */
+}
+
+/* login container */
+.login-container {
+	text-align: center; /* center the text */
+	padding: 50px 20px; /* put padding around it */
+}
+
+/* logo style */
+.logo-container {
+	margin-bottom: 30px; /* put space below the logo */
+}
+
+/* heading 1 style */
+h1 {
+	font-size: 2em; /* make the size of the heading 2em */
+	margin-bottom: 0.5em; /* put a space below the heading */
+}
+
+/* Input style */
+input[type='text'], input[type='password'] {
+	width: 90%; /* make the width 90% of the inputs */
+	padding: 10px; /* give 10px padding in the inputs */
+	margin: 10px 0; /* make 10px margin around the inputs */
+	border: 1px solid #000; /* make the border colour black */
+	border-radius: 5px; /* maek the corners rounded  */
+	font-size: 1em; /* make the text size 1em */
+}
+
+/* Button style */
+button {
+	width: 95%; /* make the width 95% for the button */
+	padding: 15px; /* give 15px padding inside the button */
+	border: none; /* no border aroudn the button */
+	border-radius: 20px; /* make the corners rounded */
+	background-color: #000; /* make the background black  */
+	color: white; /* white text */
+	font-size: 1em; /* make the text size 1em */
+	cursor: pointer; /* turn to cursor when someone tries clicking */
+	margin-top: 20px; /* put a 20px space above */
+}
+
+/* Checkbox style */
+input[type='checkbox'] {
+	margin-right: 5px; /* give 5px space right of the checkbox */
+}
+
+/* Link style */
+a {
+	color: #000; /* black text colour */
+	font-size: 0.9em; /* make the size 0.9em (make it a little smaller) of the link text */
+	transition: color 0.2s; /* smooth color transition when you hover on */
+}
+
+	/* hover effect for the links */
+	a:hover {
+		color: deepskyblue; /* change text colour to blue when you hover */
+	}
+
+/* link container styles */
+.signup-link, .forgot-password-link {
+	margin-top: 20px; /* 20px space above the links */
+}

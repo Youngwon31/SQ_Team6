@@ -1,0 +1,73 @@
+﻿/* signup.css */
+
+body, html {
+	height: 100%; /* full height  */
+	margin: 0; /* no margins */
+	font-family: Arial, sans-serif; /* font type */
+	background: #f4f4f4; /* light gray background */
+	display: flex; /* flex display */
+	justify-content: center; /* horizontally center items */
+	align-items: center; /* vertically center items */
+	padding: 20px; /* put padding around it  */
+}
+
+/* styles for form elements */
+#signupForm {
+	width: 100%; /* full height  */
+	max-width: 400px; /* 400 px max width for the form */
+	padding: 40px; /* put padding  */
+	background-color: white; /* white background  */
+	border-radius: 10px; /* make the corners rounded */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* make shadow to give depth */
+}
+
+	/* default styles for all */
+	#signupForm input[type='text'],
+	#signupForm input[type='password'],
+	#signupForm input[type='email'] {
+		width: calc(100% - 20px); /* full width minus padding */
+		padding: 10px; /* put padding */
+		margin: 10px 0; /* margin around inputs */
+		border: 1px solid #ccc; /* light grey border */
+		border-radius: 5px; /* make the corners rounded */
+		font-size: 16px; /* make the font size 16px */
+	}
+
+/* password strength indicator */
+#passwordStrengthIndicator {
+	text-align: center; /* center it */
+	margin-top: 10px; /* add 10px margin above */
+}
+
+/* password strength text */
+#passwordStrength {
+	font-weight: bold; /* make the text bold */
+}
+
+/* styles for the buttons */
+#signupForm .reveal-password-button,
+#signupForm .return-to-login-button,
+#signupForm input[type='submit'] {
+	width: 100%; /* full width */
+	padding: 10px; /* put padding */
+	margin-top: 15px; /* put 15px space above */
+	border: none; /* no border */
+	border-radius: 5px; /* make the corners rounded  */
+	background-color: #000; /* black background */
+	color: white; /* white text */
+	cursor: pointer; /* turn to cursor if someone tries clicking on it */
+}
+
+/* styles for the error message */
+.error-message {
+	color: red; /* give error in red colour */
+	margin-top: 10px; /* give  10px margin above the error message */
+}
+
+/* hover effects for buttons */
+#signupForm .reveal-password-button:hover,
+#signupForm .return-to-login-button:hover,
+#signupForm input[type='submit']:hover {
+	background-color: #555; /* darker than whote brigter than grey changes to this colour when hovered */
+	color: #ddd; /* similar to the how backgroudn changes but ligther than that */
+}
