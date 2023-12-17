@@ -13,7 +13,7 @@ namespace Namespace
             string email = this.email.Value;
 
             //creating string to where our database is
-            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=0000;";
+            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=@Yj7788794439;";
             
             //connecting to SQL database
             using (var connection = new MySqlConnection(connectionString))

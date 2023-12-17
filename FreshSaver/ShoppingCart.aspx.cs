@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
+using System.IO;
 
 namespace FreshSaver
 {
@@ -23,6 +24,10 @@ namespace FreshSaver
         private void LoadCartItems()
         {
             var cart = Session["Cart"] as Dictionary<int, int>;
+
+            string menuNameLog = "";
+            string quantityLog = "";
+            string itemTotalLog = "";
 
             if (cart != null && cart.Count > 0) //checks if cart is empty
             {
@@ -44,13 +49,19 @@ namespace FreshSaver
                         ItemTotal = itemTotal
 
                     });
+
+                    // Update log information
+                    menuNameLog += menuItem.Description + "; ";
+                    quantityLog += quantity.ToString() + "; ";
+                    itemTotalLog += itemTotal.ToString("F2") + "; ";
+
                 }
 
                 CartItemsRepeater.DataSource = cartItems;
                 CartItemsRepeater.DataBind();
 
                 lblTotalCost.Text = cartItems.Sum(item => item.ItemTotal).ToString("F2");//gets the sum total of each item we put in the cart
-                
+                LogCheckoutAttempt(menuNameLog, quantityLog, itemTotalLog);
             }
             else
             {
@@ -99,6 +110,21 @@ namespace FreshSaver
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Checkout.aspx");//continue to checkout
+        }
+
+        private void LogCheckoutAttempt(string menuNameLog, string quantityLog, string itemTotalLog)
+        {
+            string filePath = Server.MapPath("~/logs/CheckoutLogs.txt");
+            string logText = $"Timestamp: {DateTime.Now}, Menu Items: {menuNameLog}, Quantities: {quantityLog}, Item Totals: {itemTotalLog}\n";
+
+            try
+            {
+                File.AppendAllText(filePath, logText);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error writing to log file: " + ex.Message);
+            }
         }
     }
 }

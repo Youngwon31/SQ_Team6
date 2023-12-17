@@ -7,6 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace FreshSaver
 {
@@ -51,7 +52,7 @@ namespace FreshSaver
             }
 
             //Attempt to connect to database and save user information
-            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=0000;";
+            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=@Yj7788794439;";
             using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
@@ -66,7 +67,7 @@ namespace FreshSaver
                     // Registration success message
                     errorLabel.Text = "Registration successful!";
                     errorLabel.Visible = true;
-                    
+                    LogSignupAttempt(username);
                 }
                 catch (MySqlException ex)
                 {
@@ -74,11 +75,27 @@ namespace FreshSaver
                     errorLabel.Visible = true;
                 }
             }
+            
         }
         //return to log in page
         protected void ReturnToLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+
+        private void LogSignupAttempt(string username)
+        {
+            string filePath = Server.MapPath("~/logs/SignupLogs.txt");
+            string logText = $"Username: {username}, Timestamp: {DateTime.Now}\n";
+
+            try
+            {
+                File.AppendAllText(filePath, logText);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error writing to log file: " + ex.Message);
+            }
         }
     }
 }

@@ -1,8 +1,18 @@
-﻿using System;
+﻿/*
+* Filename: Login.aspx.cs
+* Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date: 16/12/2023
+* Description : 
+*               
+*               
+*/
+
+using System;
 using System.Web;
 using System.Web.UI;
 using System.Web.Security;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Namespace
 {
@@ -22,6 +32,9 @@ namespace Namespace
             // Extracting user input
             string username = usernameInput.Value;
             string password = passwordInput.Value;
+
+            // Log the login attempt before validating the user
+            LogLoginAttempt(username);
 
             if (ValidateUser(username, password))
             {
@@ -70,7 +83,7 @@ namespace Namespace
 
         private bool ValidateUser(string username, string password)
         {
-            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=0000;";
+            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=@Yj7788794439;";
             using (var connection = new MySqlConnection(connectionString))
             {
                 // Create a user validation query with username and password
@@ -90,6 +103,21 @@ namespace Namespace
                     int userCount = Convert.ToInt32(command.ExecuteScalar());
                     return userCount > 0;
                 }
+            }
+        }
+
+        private void LogLoginAttempt(string username)
+        {
+            string filePath = Server.MapPath("~/logs/LoginLogs.txt");
+            string logText = $"Username: {username}, Timestamp: {DateTime.Now}\n";
+
+            try
+            {
+                File.AppendAllText(filePath, logText);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error writing to log file: " + ex.Message);
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿<!--
  * Filename: Login.aspx
- * Author:   Ben Heyden, Tugrap Turker Aydiner, Kim Jiu, Youngwon Seo
+ * Author:   Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
  * Date:     16/12/2023
  * Description: This file holds the client logic of our program taking user input 
  *              and sending it to the server to validate and process against our SQL database
