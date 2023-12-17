@@ -11,7 +11,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <!-- Top bar with profile image on the right -->
         <div class="top-bar">
-            <asp:ImageButton ID="imgbtnProfile" runat="server" ImageUrl="~/images/profile-icon.png" PostBackUrl="~/StoreDescription.aspx" CssClass="profile-button" />
+            <asp:ImageButton ID="imgbtnProfile" runat="server" ImageUrl="~/images/profile-icon.png" PostBackUrl="~/account.aspx" CssClass="profile-button" />
         </div>
 
         <!-- Search bar section -->
