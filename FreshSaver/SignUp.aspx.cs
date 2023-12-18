@@ -20,11 +20,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Configuration;
 
 namespace FreshSaver
 {
     public partial class SignUp : System.Web.UI.Page
     {
+        // Database connection string
+        private string connectionString = ConfigurationManager.ConnectionStrings["UserDB"].ConnectionString;
         // This method handles the event when the submit button is clicked
         protected void Submit_Click(object sender, EventArgs e)
         {
@@ -64,9 +67,7 @@ namespace FreshSaver
                 errorLabel.Visible = true;
                 return;
             }
-
-            //Attempt to connect to database and save user information
-            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=@Yj7788794439;";
+   
             using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();

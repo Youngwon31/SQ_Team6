@@ -12,7 +12,7 @@
 <head runat="server">
     <title>Forgot Password</title>
     <link href="forgotPassword.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />s
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
     <form id="form1" runat="server">

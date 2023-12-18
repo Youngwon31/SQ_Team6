@@ -2,3 +2,5 @@ Timestamp: 2023-12-17 5:42:02 PM, Menu Items: 6 pack of donuts; Chicken Nuggets;
 Timestamp: 2023-12-17 6:07:46 PM, Menu Items: Kimchi Pancake; , Quantities: 1; , Item Totals: 6.50; 
 Timestamp: 2023-12-17 6:09:40 PM, Menu Items: Kimchi Pancake; , Quantities: 1; , Item Totals: 6.50; 
 Timestamp: 2023-12-17 6:54:26 PM, Menu Items: kamjatang; , Quantities: 1; , Item Totals: 8.99; 
+Timestamp: 2023-12-17 8:21:27 PM, Menu Items: Chicken Nuggets; , Quantities: 2; , Item Totals: 11.00; 
+Timestamp: 2023-12-17 8:22:49 PM, Menu Items: Chicken Nuggets; , Quantities: 2; , Item Totals: 11.00; 

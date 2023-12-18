@@ -9,6 +9,7 @@
 */
 
 using System;
+using System.Configuration;
 using System.Web.UI;
 using MySql.Data.MySqlClient;
 
@@ -16,14 +17,13 @@ namespace Namespace
 {
     public partial class ForgotPassword : Page
     {
+        // Database connection string
+        private string connectionString = ConfigurationManager.ConnectionStrings["UserDB"].ConnectionString;
         protected void RetrievePassword_Click(object sender, EventArgs e)
         {
             //getting user input
             string username = this.username.Value;
             string email = this.email.Value;
-
-            //creating string to where our database is
-            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=@Yj7788794439;";
             
             //connecting to SQL database
             using (var connection = new MySqlConnection(connectionString))
