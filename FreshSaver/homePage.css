@@ -1,81 +1,89 @@
 ﻿/* homepage.css */
 
 
+/* General styling for all elements */
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	box-sizing: border-box; /* Ensures padding and border don't affect overall dimensions */
+	margin: 0; /* Resets default margin for a clean layout */
+	padding: 0; /* Resets default padding for uniformity */
 }
 
 
+/* Body and HTML basic styling */
 body, html {
-	margin: 0;
-	padding: 0;
-	font-family: 'Arial', sans-serif;
-	background-color: #fff; 
+	margin: 0; /* Eliminates default margin for full-width layout */
+	padding: 0; /* Eliminates default padding for consistent spacing */
+	font-family: 'Arial', sans-serif; /* Arial font for clean and readable text */
+	background-color: #fff; /* White background for a bright and clean look */
 }
 
-
+/* Top bar styling */
 .top-bar {
-	display: flex;
-	flex-direction: column; 
-	align-items: center; 
-	padding: 1em;
-	background-color: #f8f8f8; 
+	display: flex; /* Flexible box layout for easy alignment */
+	flex-direction: column; /* Stacks children elements vertically */
+	align-items: center; /* Centers items along the cross axis */
+	padding: 1em; /* Provides space around content inside the bar */
+	background-color: #f8f8f8; /* Light grey background for subtle contrast */
 }
 
 
+/* Profile button styling */
 .profile-button {
-	height: 30px;
-	width: auto;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
+	height: 30px; /* Fixed height for consistency */
+	width: auto; /* Width adjusts to fit content */
+	border: none; /* No border for a sleek look */
+	background-color: transparent; /* Invisible background to blend with surroundings */
+	cursor: pointer; /* Changes cursor to indicate clickability */
 }
 
 
+/* Address container styling */
 .address-container {
-	display: flex;
-	align-items: center; 
-	justify-content: center; 
-	width: 100%; 
-	padding-bottom: 1em; 
+	display: flex; /* Flex layout for responsive arrangement */
+	align-items: center; /* Vertically centers items for visual balance */
+	justify-content: center; /* Horizontally centers content for a symmetrical look */
+	width: 100%; /* Utilizes full width of its container */
+	padding-bottom: 1em; /* Extra space at the bottom for separation from other elements */
 }
 
 
+/* Pin icon styling */
 .pin-icon {
-	height: 20px; 
-	width: auto;
-	position: relative;
-	top: -3px; 
-	margin-right: 5px; 
+	height: 20px; /* Compact height for icon size consistency */
+	width: auto; /* Auto width to maintain aspect ratio */
+	position: relative; /* Allows slight positional adjustments */
+	top: -3px; /* Slightly shifts icon upwards for visual alignment */
+	margin-right: 5px; /* Space to the right for separation from text */
 }
 
 
+/* Search bar container styling */
 .search-bar {
-	position: relative;
-	width: 90%; 
-	margin: 1em auto; 
+	position: relative; /* Allows absolute positioning of child elements */
+	width: 90%; /* Moderately wide for sufficient typing space */
+	margin: 1em auto; /* Centered horizontally with equal vertical margins */
 }
 
 
+/* Search box styling */
 .search-box {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #ccc; 
-	border-radius: 20px; 
-	font-size: 1em;
+	width: 100%; /* Utilizes full width for maximum input space */
+	padding: 10px; /* Comfortable padding for ease of typing */
+	border: 1px solid #ccc; /* Subtle border for clear definition */
+	border-radius: 20px; /* Rounded corners for a modern, friendly look */
+	font-size: 1em; /* Standard text size for readability */
 }
 
 
+/* Search button styling */
 .search-button {
-	position: absolute;
-	right: 5%;
-	top: 50%;
-	transform: translateY(-50%);
-	background: transparent;
-	border: none;
-	cursor: pointer;
+	position: absolute; /* Positioned relative to search-bar */
+	right: 5%; /* Slightly inset from the right edge */
+	top: 50%; /* Vertically centered */
+	transform: translateY(-50%); /* Precisely centers button vertically */
+	background: transparent; /* Invisible background for an integrated look */
+	border: none; /* No border for a clean button style */
+	cursor: pointer; /* Cursor change indicates interactive element */
 }
 
 
@@ -87,141 +95,144 @@ body, html {
 }
 
 
+/* Style for each category icon */
 .category-icon {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: none;
-	border: none;
-	text-decoration: none;
-	cursor: pointer;
-	padding: 10px;
-	transition: transform 0.3s ease;
+	display: flex; /* Enables flexbox for layout and alignment */
+	flex-direction: column; /* Stacks icon and text vertically */
+	align-items: center; /* Centers items horizontally in the icon container */
+	background: none; /* No background to keep it transparent */
+	border: none; /* No border for a clean, unobtrusive look */
+	text-decoration: none; /* Removes underline from text */
+	cursor: pointer; /* Changes cursor to indicate clickability */
+	padding: 10px; /* Padding around the icon for spacing */
+	transition: transform 0.3s ease; /* Smooth scaling transition on hover */
 }
 
 	.category-icon:hover {
-		transform: scale(1.1); 
+		transform: scale(1.1); /* Slightly enlarges icon on hover for visual feedback */
 	}
 
 	.category-icon img {
-		width: 50px; 
-		height: auto;
-		margin-bottom: 5px; 
+		width: 50px; /* Sets a consistent width for all icons */
+		height: auto; /* Auto height to maintain aspect ratio */
+		margin-bottom: 5px; /* Spacing between icon and text */
 	}
 
 	.category-icon span {
-		display: block;
-		text-align: center;
-		color: #333;
-		font-size: 0.85em;
+		display: block; /* Ensures the text is on a new line */
+		text-align: center; /* Centers text below the icon */
+		color: #333; /* Dark text for readability */
+		font-size: 0.85em; /* Slightly smaller font size for subtlety */
 	}
 
-
+/* Highlighting the selected category */
 .selected-category {
-	font-weight: bold;
-	border-bottom: 3px solid #333; 
+	font-weight: bold; /* Makes the text bolder */
+	border-bottom: 3px solid #333; /* Underline effect with solid border */
 }
 
-
+/* Style for individual store item */
 .store-item {
-	display: flex;
-	flex-direction: column; 
-	margin-bottom: 1em;
-	background: #f8f8f8;
-	border-radius: 10px;
-	overflow: hidden;
-	padding: 1em; 
+	display: flex; /* Flex layout for responsive design */
+	flex-direction: column; /* Arranges elements vertically */
+	margin-bottom: 1em; /* Space below each item for separation */
+	background: #f8f8f8; /* Light background for distinction */
+	border-radius: 10px; /* Rounded corners for a softer look */
+	overflow: hidden; /* Hides any overflowing content */
+	padding: 1em; /* Internal padding for spacing */
 }
 
-
+/* Style for the image of the store */
 .store-image {
-	width: 80%; 
-	align-content: center;
-	height: auto; 
-	border-bottom: 1px solid #ccc; 
+	width: 80%; /* Width relative to its container */
+	align-content: center; /* Aligns content in the center */
+	height: auto; /* Height adjusts to maintain aspect ratio */
+	border-bottom: 1px solid #ccc; /* Separates image from text with a line */
 }
 
-
+/* Style for the store description */
 .store-description {
-	padding: 1em; 
-	font-size: 1em; 
+	padding: 1em; /* Padding around the text for readability */
+	font-size: 1em; /* Standard font size for uniformity */
 }
 
-
+/* Style for the store name */
 .store-name {
-	font-weight: bold;
-	margin-bottom: 0.5em; 
+	font-weight: bold; /* Bold text for emphasis */
+	margin-bottom: 0.5em; /* Space below the name for separation */
 }
 
-
+/* Style for the menu item name */
 .menu-item-name {
-	color: #666;
-	margin-bottom: 0.5em; 
+	color: #666; /* Medium grey for subtlety */
+	margin-bottom: 0.5em; /* Space below each menu item name */
 }
 
-
+/* Style for the original price */
 .original-price {
-	text-decoration: line-through;
-	color: #999;
-	margin-bottom: 0.5em; 
+	text-decoration: line-through; /* Strikethrough to indicate discount */
+	color: #999; /* Light grey to de-emphasize original price */
+	margin-bottom: 0.5em; /* Space below price for separation */
 }
 
-
+/* Style for the discounted price */
 .discounted-price {
-	color: #333; 
-	font-weight: bold;
+	color: #333; /* Darker color for emphasis */
+	font-weight: bold; /* Bold to highlight the deal */
 }
 
-
+/* Style for the search result label */
 .search-result-label {
-	color: red;
-	font-size: 14px;
+	color: red; /* Red color for attention */
+	font-size: 14px; /* Slightly smaller font size for subtlety */
 	/* Other styling as needed */
 }
 
-/* Search Bar Style */
+/* Style for the search bar */
 .search-bar {
-	position: relative;
-	margin: 20px auto;
-	width: 80%;
-	max-width: 600px;
+	position: relative; /* Relative positioning for absolute child elements */
+	margin: 20px auto; /* Centralized with vertical margin */
+	width: 80%; /* Moderately wide for sufficient search area */
+	max-width: 600px; /* Maximum width constraint for large screens */
 }
 
+/* Style for the search box inside the search bar */
 .search-box {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	width: 100%; /* Full width of its parent */
+	padding: 10px; /* Padding for comfort in typing */
+	border: 1px solid #ddd; /* Light grey border for definition */
+	border-radius: 4px; /* Slightly rounded corners for a soft look */
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
 }
 
-/* Search Results Style */
+/* Style for individual search result items */
 .search-result-item {
-	background-color: white;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	margin-top: 5px;
-	padding: 10px;
-	cursor: pointer;
-	transition: background-color 0.3s;
+	background-color: white; /* White background for clarity */
+	border: 1px solid #ddd; /* Light border for distinction */
+	border-radius: 4px; /* Rounded corners for a modern look */
+	margin-top: 5px; /* Space above each item for separation */
+	padding: 10px; /* Padding around content for spacing */
+	cursor: pointer; /* Indicates item is clickable */
+	transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.search-result-item:hover {
-	background-color: #f8f8f8;
-}
+	.search-result-item:hover {
+		background-color: #f8f8f8; /* Changes background on hover for visual feedback */
+	}
 
-/* Link styles */
-.search-result-item a {
-	color: black; 
-	text-decoration: none; 
-	font-weight: bold; 
-}
+	/* Style for links within search results */
+	.search-result-item a {
+		color: black; /* Black for readability */
+		text-decoration: none; /* No underline for a clean look */
+		font-weight: bold; /* Bold to make it stand out */
+	}
 
-.search-result-item a:hover {
-	text-decoration: underline; 
-	color: darkblue;
-}
+		.search-result-item a:hover {
+			text-decoration: underline; /* Underline on hover for emphasis */
+			color: darkblue; /* Dark blue for a noticeable hover effect */
+		}
 
-.tag{
-	margin-left: 10px;
+/* Style for tags within search results */
+.tag {
+	margin-left: 10px; /* Space to the left for separation from other elements */
 }

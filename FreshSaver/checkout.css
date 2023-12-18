@@ -1,65 +1,67 @@
-﻿
+﻿/* Checkout.css */
+
+
+/* Resets margin and padding for all elements */
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box; /* Includes padding and border in the width and height of elements */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
 }
 
+/* Basic styling for the body and html tags */
 body, html {
-	font-family: 'Arial', sans-serif; 
-	background-color: #fff; 
-	color: #333; 
+    font-family: 'Arial', sans-serif; /* Sets Arial as the font for readability */
+    background-color: #fff; /* White background for a clean look */
+    color: #333; /* Dark grey text color for readability */
 }
 
-
+/* Styling for div elements */
 div {
-	max-width: 600px; 
-	background-color: #f7f7f7; 
-	padding: 20px; 
-	margin: 20px auto; 
-	border-radius: 8px; 
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; /* Maximum width for better readability */
+    background-color: #f7f7f7; /* Light grey background for subtle contrast */
+    padding: 20px; /* Padding for internal spacing */
+    margin: 20px auto; /* Centers the div with automatic margins */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-
+/* Styling for h2 and h3 headings */
 h2, h3 {
-	color: #333; 
-	margin: 0.5em 0;
-	text-align: center; 
+    color: #333; /* Dark grey color for headings */
+    margin: 0.5em 0; /* Margin around headings for spacing */
+    text-align: center; /* Center-aligns the text */
 }
 
-
+/* Styling for the RadioButtonList control */
 #rblPaymentOptions {
-	margin: 1em 0; 
+    margin: 1em 0; /* Margin around the control for spacing */
 }
 
-
+/* Styling for text and password input fields */
 input[type="text"], input[type="password"] {
-	width: 100%; 
-	padding: 10px; 
-	margin-bottom: 10px; 
-	border: 1px solid #ccc; 
-	border-radius: 4px; 
+    width: 100%; /* Full width to fill the container */
+    padding: 10px; /* Padding for comfortable typing */
+    margin-bottom: 10px; /* Bottom margin for spacing between fields */
+    border: 1px solid #ccc; /* Light grey border for visual definition */
+    border-radius: 4px; /* Slightly rounded corners */
 }
 
-
+/* Styling for validators like RequiredFieldValidator and RegularExpressionValidator */
 span[id^="rfv"], span[id^="regex"], span[id^="cv"] {
-	color: #e74c3c; 
-	display: block; 
-	margin-bottom: 10px; 
+    color: #e74c3c; /* Red color for error messages */
+    display: block; /* Display as block-level element */
+    margin-bottom: 10px; /* Bottom margin for spacing from input fields */
 }
 
-
+/* Styling for the checkout button and return-to-home button */
 #btnCheckout, .return-to-home-button {
-	background-color: #2ecc71; 
-	color: white; 
-	padding: 15px 20px; 
-	border: none; 
-	border-radius: 20px; 
-	font-size: 1.2em; 
-	width: 100%; 
-	cursor: pointer; 
-	margin-top: 20px; 
+    background-color: #2ecc71; /* Green background for visibility and aesthetics */
+    color: white; /* White text for contrast */
+    padding: 15px 20px; /* Padding for size and comfort */
+    border: none; /* No border for a clean button look */
+    border-radius: 20px; /* Rounded corners for a modern style */
+    font-size: 1.2em; /* Slightly larger font size for emphasis */
+    width: 100%; /* Full width to fill the container */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    margin-top: 20px; /* Top margin for spacing from other elements */
 }
-
-

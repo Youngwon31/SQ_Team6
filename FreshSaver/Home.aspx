@@ -1,4 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="FreshSaver.Home" %>
+﻿<!--
+* Filename: Home.aspx
+* Author:   Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date:     16/12/2023
+* Description: This HTML markup file creates the user interface for the Home page of the FreshSaver website.
+*              It includes a top bar with a profile icon, a search bar, category selection buttons, 
+*              and sections to display recommended and new stores.
+-->
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="FreshSaver.Home" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -21,6 +30,7 @@
                 <ContentTemplate>
                     <asp:Repeater ID="rptSearchResults" runat="server" OnItemCommand="rptSearchResults_ItemCommand">
                         <ItemTemplate>
+                            <!-- Search result items -->
                             <div class="search-result-item">
                                 <asp:LinkButton CommandName="SelectStore" CommandArgument='<%# Eval("StoreID") %>' Text='<%# Eval("StoreName") %>' runat="server" />
                             </div>
@@ -56,8 +66,7 @@
                 </asp:LinkButton>
             </div>
 
-
-
+            <!-- Section for displaying recommended stores -->
             <div class="store-section">
                 <asp:Repeater ID="StoresRepeater" runat="server">
                     <HeaderTemplate>
@@ -79,6 +88,7 @@
                 </asp:Repeater>
             </div>
 
+            <!-- Section for displaying new stores -->
             <div class="new-stores-section">
                 <asp:Repeater ID="NewStoresRepeater" runat="server">
                     <HeaderTemplate>

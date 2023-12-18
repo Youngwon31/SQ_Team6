@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+* Filename: Home.aspx.cs
+* Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date: 16/12/2023
+* Description: This file contains the server-side code for the Home page of the FreshSaver website.
+*              It includes functionality for loading stores by category, handling search queries,
+*              and managing user interactions such as selecting a store or a category.
+*              The code dynamically binds store data to repeaters based on categories or search results.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -14,6 +24,7 @@ namespace FreshSaver
 {
     public partial class StoreDescription : System.Web.UI.Page
     {
+        // Executes when the page is loaded.
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,8 +38,10 @@ namespace FreshSaver
             }
         }
 
+        // Loads detailed information of the store including its menu items.
         private void LoadStoreDetails(int storeId)
         {
+            // Establish database connection and retrieve store details.
             string connectionString = ConfigurationManager.ConnectionStrings["storesDB"].ConnectionString;
             using (var conn = new MySqlConnection(connectionString))
             {
@@ -79,9 +92,10 @@ namespace FreshSaver
             }
         }
 
-
+        // Adds an item to the shopping cart.
         protected void AddToCart(object sender, EventArgs e)
         {
+            // Handling the addition of an item to the cart.
             Button btn = sender as Button;
             int menuItemId = Convert.ToInt32(((Button)sender).CommandArgument);
 
@@ -120,6 +134,7 @@ namespace FreshSaver
 
         }
 
+        // Removes an item from the shopping cart.
         protected void RemoveFromCart(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -165,6 +180,7 @@ namespace FreshSaver
 
         }
 
+        // Gets the current stock for a specific menu item.
         private int GetCurrentStock(int menuItemId)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["storesDB"].ConnectionString;
@@ -181,6 +197,7 @@ namespace FreshSaver
             }
         }
 
+        // Updates the stock for a specific menu item.
         private void UpdateStock(int menuItemId, int newStock)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["storesDB"].ConnectionString;
@@ -199,6 +216,7 @@ namespace FreshSaver
 
         }
 
+        // Updates the display of total cost and quantity in the cart.
         protected void UpdateCartTotals()
         {
             var cart = Session["Cart"] as Dictionary<int, int>;
@@ -224,6 +242,7 @@ namespace FreshSaver
             }
         }
 
+        // Retrieves the price of a specific menu item.
         private decimal GetPrice(int menuItemId)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["storesDB"].ConnectionString;

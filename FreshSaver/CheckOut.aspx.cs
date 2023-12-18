@@ -1,4 +1,13 @@
-﻿using MySql.Data.MySqlClient;
+﻿/*
+* Filename: CheckOut.aspx.cs
+* Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date: 16/12/2023
+* Description: This file contains the server-side code for the Checkout page of the FreshSaver website.
+*              It handles the display of selected store details and manages the checkout process, including
+*              payment option selection and credit card validation. It also confirms the order and clears the session.
+*/
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,6 +20,7 @@ namespace FreshSaver
 {
     public partial class CheckOut : System.Web.UI.Page
     {
+        // Executes when the page is loaded.
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -18,10 +28,13 @@ namespace FreshSaver
                 GetStoreDetails();//getting stores pickup available times and store name
                 rblPaymentOptions.SelectedIndex = 0;//setting pay in person as default option
             }
-            pnlCreditCardInfo.Visible = rblPaymentOptions.SelectedValue == "PayOnline";//making the user input only visible if user selects pay online
+
+            // Update visibility of credit card info based on selected payment option.
+            pnlCreditCardInfo.Visible = rblPaymentOptions.SelectedValue == "PayOnline";
         
         }
 
+        // Handles changes in payment option selection.
         protected void rblPaymentOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Show/hide the credit card information panel based on the selected option
@@ -29,6 +42,7 @@ namespace FreshSaver
 
         }
 
+        // Retrieves and displays store details such as pickup times and store name.
         private void GetStoreDetails()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["storesDB"].ConnectionString;
@@ -53,7 +67,8 @@ namespace FreshSaver
                 }
             }
         }
-        
+
+        // Validates the expiry date of the credit card.
         protected void ValidateExpiryDate(object source, ServerValidateEventArgs args)
         {
             //checking the input wasn't left empty
@@ -85,6 +100,7 @@ namespace FreshSaver
             
         }
 
+        // Finalizes the checkout process.
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
