@@ -1,4 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StoreDescription.aspx.cs" Inherits="FreshSaver.StoreDescription" %>
+﻿<!--
+* Filename: StoreDescription.aspx
+* Author:   Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date:     16/12/2023
+* Description: This HTML markup file creates the user interface for the Store Description page of the FreshSaver website.
+*              It displays detailed information about a specific store, including its image, name, address, and pick-up times.
+*              The page also features a menu section where users can view menu items, adjust quantities, and see pricing details.
+*              It includes functionality for adding or removing items from the shopping cart and displays total cost and cart quantity.
+*              A button is provided for navigating to the ShoppingCart page for further actions.
+-->
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StoreDescription.aspx.cs" Inherits="FreshSaver.StoreDescription" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -25,7 +36,7 @@
             <h2>Menu</h2>
             <asp:Repeater ID="MenuItemsRepeater" runat="server">
                 <ItemTemplate>
-                    <!-- 메뉴 아이템 디스플레이 로직 -->
+                    <!-- Menu Item Display Logic -->
                     <div class="menu-item">
                         <div class="quantity-controls">
                             <asp:Button ID="btnRemoveFromCart" runat="server" CommandArgument='<%# Eval("MenuItemID") %>' Text="-" OnClick="RemoveFromCart" CssClass="quantity-btn remove-btn" />
@@ -51,7 +62,7 @@
                 </ItemTemplate>
             </asp:Repeater>
 
-            <!-- 재고 메시지와 수량 표시 -->
+            <!-- Displaying inventory messages and quantities -->
             <div class="stock-info">
                 <asp:Label ID="lblStockMessage" runat="server" CssClass="stock-message" Visible="false"></asp:Label>
             </div>

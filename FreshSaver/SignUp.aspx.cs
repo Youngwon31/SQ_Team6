@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+* Filename: SignUp.aspx.cs
+* Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date: 16/12/2023
+* Description: This file contains the server-side code for the SignUp page of the FreshSaver website.
+*              It includes methods for handling user registration, including input validation, 
+*              database interaction for storing user details, and logging signup attempts.
+*              The user inputs are validated for format and completeness before being inserted
+*              into the UserDB database. The page also provides a method to redirect users 
+*              to the Login page.
+*/
+
+using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Linq;
@@ -13,8 +25,10 @@ namespace FreshSaver
 {
     public partial class SignUp : System.Web.UI.Page
     {
+        // This method handles the event when the submit button is clicked
         protected void Submit_Click(object sender, EventArgs e)
         {
+            // Retrieving user inputs from the form
             string username = this.username.Text;
             string email = this.email.Text;
             string password = this.password.Text;
@@ -56,6 +70,7 @@ namespace FreshSaver
             using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
+                // SQL command to insert new user data into the database
                 var cmd = new MySqlCommand("INSERT INTO users (username, email, password) VALUES (@username, @email, @password)", conn);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@email", email);
@@ -67,33 +82,40 @@ namespace FreshSaver
                     // Registration success message
                     errorLabel.Text = "Registration successful!";
                     errorLabel.Visible = true;
+                    // Log the signup attempt
                     LogSignupAttempt(username);
                 }
                 catch (MySqlException ex)
                 {
+                    // Display error message in case of an exception
                     errorLabel.Text = $"An error occurred: {ex.Message}";
                     errorLabel.Visible = true;
                 }
             }
             
         }
-        //return to log in page
+
+        // Method to redirect the user to the login page
         protected void ReturnToLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
         }
 
+        // Method to log the signup attempt
         private void LogSignupAttempt(string username)
         {
+            // Define the path and content of the log file
             string filePath = Server.MapPath("~/logs/SignupLogs.txt");
             string logText = $"Username: {username}, Timestamp: {DateTime.Now}\n";
 
             try
             {
+                // Append the log text to the file
                 File.AppendAllText(filePath, logText);
             }
             catch (Exception ex)
             {
+                // Handle any errors that occur during file writing
                 Console.WriteLine("Error writing to log file: " + ex.Message);
             }
         }

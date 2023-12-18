@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+* Filename: ForgotPassword.aspx.cs
+* Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date: 16/12/2023
+* Description: This file contains the server-side code for the Forgot Password page of the website.
+*              It allows users to retrieve their password by entering their username and email.
+*              The code checks the user's credentials against the database and, if found,
+*              displays the password. It also includes functionality to redirect users back to the login page.
+*/
+
+using System;
 using System.Web.UI;
 using MySql.Data.MySqlClient;
 

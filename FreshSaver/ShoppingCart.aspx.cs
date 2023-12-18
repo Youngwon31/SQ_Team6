@@ -1,4 +1,13 @@
-﻿using MySql.Data.MySqlClient;
+﻿/*
+* Filename: ShoppingCart.aspx.cs
+* Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
+* Date: 16/12/2023
+* Description: This file contains the server-side code for the Shopping Cart page of the FreshSaver website.
+*              It manages the display of items in the user's shopping cart, including item details and total cost.
+*              The page also provides functionality to proceed to checkout and logs shopping cart activity.
+*/
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,6 +22,7 @@ namespace FreshSaver
 {
     public partial class ShoppingCart : System.Web.UI.Page
     {
+        // Executes when the page is loaded.
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,6 +31,7 @@ namespace FreshSaver
             }
         }
 
+        // Loads items from the session-based shopping cart and binds them to a repeater control.
         private void LoadCartItems()
         {
             var cart = Session["Cart"] as Dictionary<int, int>;
@@ -70,6 +81,7 @@ namespace FreshSaver
             }
         }
 
+        // Retrieves details of a specific menu item from the database.
         private MenuItem GetMenuItemDetails(int menuItemId)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["storesDB"].ConnectionString;
@@ -105,13 +117,14 @@ namespace FreshSaver
             return new MenuItem();
         }
 
-    
 
+        // Redirects to the checkout page when the checkout button is clicked.
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Checkout.aspx");//continue to checkout
         }
 
+        // Logs checkout attempts with details about menu items and quantities.
         private void LogCheckoutAttempt(string menuNameLog, string quantityLog, string itemTotalLog)
         {
             string filePath = Server.MapPath("~/logs/CheckoutLogs.txt");

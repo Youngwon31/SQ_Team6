@@ -1,177 +1,130 @@
-﻿﻿ /*login*/
+﻿/* General styling for body and html */
 body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    height: 100%; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set default font */
 }
 
+/* Styling for the login container */
 .login-container {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width for the container */
+    margin: auto; /* Center the container horizontally */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Padding inside the container */
 }
 
+/* Styling for the logo container */
 .logo-container {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Margin at the bottom for spacing */
 }
 
+/* Responsive image styling */
 .responsive-image {
-    width: 60%;
-    height: auto;
+    width: 60%; /* Width relative to its parent */
+    height: auto; /* Height to maintain aspect ratio */
 }
 
+/* Input field styling */
 input[type=text], input[type=password] {
-    font-size: 1rem;
-    padding: 1rem;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0px;
-    background-color: transparent;
-    outline: none;
+    font-size: 1rem; /* Font size */
+    padding: 1rem; /* Padding inside the fields */
+    border: none; /* No border */
+    border-bottom: 1px solid #ccc; /* Border at the bottom */
+    border-radius: 0px; /* No border radius */
+    background-color: transparent; /* Transparent background */
+    outline: none; /* Remove focus outline */
 }
 
+    /* Styling for input fields when focused */
     input[type=text]:focus, input[type=password]:focus {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid black; /* Thicker border on focus */
     }
 
+/* Styling for buttons */
 button {
-    padding: 1rem 5rem;
-    border: none;
-    border-radius: 30px;
-    background-color: black;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 1rem;
+    padding: 1rem 5rem; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 1rem; /* Top margin for spacing */
 }
 
-
-
+    /* Hover effect for buttons */
     button:hover {
-        opacity: 1;
+        opacity: 0.8; /* Slightly transparent on hover */
     }
 
+/* Styling for the remember-me container */
 .remember-me-container {
-    color: grey;
-    margin-top: 15px;
+    color: grey; /* Grey text color */
+    margin-top: 15px; /* Top margin for spacing */
 }
 
+/* Styling for the error message */
 #errorMessage {
-    margin-top: 15px;
+    margin-top: 15px; /* Top margin for spacing */
 }
 
+/* Styling for the sign-up link */
 .signup-link {
-    color: grey;
-    margin-top: 7rem;
+    color: grey; /* Grey text color */
+    margin-top: 7rem; /* Large top margin for spacing */
 }
 
-/*signup*/
+/* Styling for the signup container, similar to login container */
 .signup-container {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
+    /* Similar styles as .login-container */
 }
 
+/* Input field styling for signup, similar to login */
 input[type=text], input[type=password], input[type=email], .password-input {
-    font-size: 1rem;
-    padding: 1rem;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0px;
-    background-color: transparent;
-    outline: none;
+    /* Similar styles as input[type=text] and input[type=password] */
 }
 
-    input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-        border-bottom: 2px solid black;
-    }
-
+/* Password strength indicator styling */
 #passwordStrengthIndicator {
-    text-align: left;
-    margin-top: 5px;
+    text-align: left; /* Align text to the left */
+    margin-top: 5px; /* Top margin for spacing */
 }
 
 #passwordStrength {
-    font-weight: bold;
+    font-weight: bold; /* Bold font for emphasis */
 }
 
-
-
-/*home*/
+/* Styling for the home container */
 .home-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    /* General styles for home page container */
 }
 
+/* Styling for the search bar in home container */
 .search-bar {
-    margin: 20px 0;
+    margin: 20px 0; /* Margin above and below for spacing */
 }
 
+/* Flex container for categories */
 .category-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly */
+    margin-bottom: 20px; /* Bottom margin for spacing */
 }
 
+/* Styling for category icons */
 .category-icon {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+    text-decoration: none; /* Remove text underline */
+    color: black; /* Black text color */
+    font-weight: bold; /* Bold font for emphasis */
 }
 
+/* Styling for individual product items */
 .product-item {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    /* Styles for product items */
 }
 
-.store-image {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px 8px 0 0;
-}
-
-.product-description {
-    padding: 10px;
-}
-
-.store-name {
-    font-weight: bold;
-}
-
-.price {
-    color: red;
-    font-weight: bold;
-}
-
-.original-price {
-    text-decoration: line-through;
-    color: grey;
-}
-
-
+/* Responsive styling for smaller screens */
 @media screen and (max-width: 768px) {
-    .login-container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .home-container {
-        padding: 10px;
-    }
-
-    .category-container {
-        align-items: center;
-    }
-
-    .category-icon {
-        margin-bottom: 10px;
-    }
-
-    .product-item {
-    }
+    /* Adjustments for login and home containers, and category icons */
 }

@@ -2,9 +2,10 @@
 * Filename: Login.aspx.cs
 * Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
 * Date: 16/12/2023
-* Description : 
-*               
-*               
+* Description: This file contains the server-side code for the Login page of the website.
+*              It handles user authentication, including validating user credentials against 
+*              a database, managing authentication tickets, and logging login attempts. 
+*              Users are redirected to their originally requested page upon successful authentication.
 */
 
 using System;
@@ -13,11 +14,16 @@ using System.Web.UI;
 using System.Web.Security;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Configuration;
 
 namespace Namespace
 {
     public partial class Login : Page
     {
+        // Database connection string
+        private string connectionString = ConfigurationManager.ConnectionStrings["UserDB"].ConnectionString;
+
+        // Executes when the page is loaded.
         protected void Page_Load(object sender, EventArgs e)
         {
             // Redirect to a different page if the user is already authenticated
@@ -81,9 +87,9 @@ namespace Namespace
             }
         }
 
+        // Validates user credentials against the database
         private bool ValidateUser(string username, string password)
         {
-            string connectionString = "Server=localhost; Database=UserDB; Uid=root; Pwd=@Yj7788794439;";
             using (var connection = new MySqlConnection(connectionString))
             {
                 // Create a user validation query with username and password
@@ -106,6 +112,7 @@ namespace Namespace
             }
         }
 
+        // Logs each login attempt to a file
         private void LogLoginAttempt(string username)
         {
             string filePath = Server.MapPath("~/logs/LoginLogs.txt");
@@ -113,10 +120,12 @@ namespace Namespace
 
             try
             {
+                // Append the log text to the file
                 File.AppendAllText(filePath, logText);
             }
             catch (Exception ex)
             {
+                // Handle any file writing errors
                 Console.WriteLine("Error writing to log file: " + ex.Message);
             }
         }
