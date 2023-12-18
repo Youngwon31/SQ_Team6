@@ -3,65 +3,65 @@
 
 /* Resets margin and padding for all elements */
 * {
-    box-sizing: border-box; /* Includes padding and border in the width and height of elements */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* include padding and border in width and height */
+    margin: 0; /* no margins */
+    padding: 0; /* no padding */
 }
 
 /* Basic styling for the body and html tags */
 body, html {
-    font-family: 'Arial', sans-serif; /* Sets Arial as the font for readability */
-    background-color: #fff; /* White background for a clean look */
-    color: #333; /* Dark grey text color for readability */
+    font-family: 'Arial', sans-serif; /* font type */
+    background-color: #fff; /* white background */
+    color: #333; /* dark grey text color */
 }
 
 /* Styling for div elements */
 div {
-    max-width: 600px; /* Maximum width for better readability */
-    background-color: #f7f7f7; /* Light grey background for subtle contrast */
-    padding: 20px; /* Padding for internal spacing */
-    margin: 20px auto; /* Centers the div with automatic margins */
-    border-radius: 8px; /* Rounded corners for a softer look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* maximum width */
+    background-color: #f7f7f7; /* light grey background */
+    padding: 20px; /* padding inside */
+    margin: 20px auto; /* center with automatic margins */
+    border-radius: 8px; /* rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
 /* Styling for h2 and h3 headings */
 h2, h3 {
-    color: #333; /* Dark grey color for headings */
-    margin: 0.5em 0; /* Margin around headings for spacing */
-    text-align: center; /* Center-aligns the text */
+    color: #333; /* dark grey color */
+    margin: 0.5em 0; /* space around */
+    text-align: center; /* center text */
 }
 
 /* Styling for the RadioButtonList control */
 #rblPaymentOptions {
-    margin: 1em 0; /* Margin around the control for spacing */
+    margin: 1em 0; /* space around */
 }
 
 /* Styling for text and password input fields */
 input[type="text"], input[type="password"] {
-    width: 100%; /* Full width to fill the container */
-    padding: 10px; /* Padding for comfortable typing */
-    margin-bottom: 10px; /* Bottom margin for spacing between fields */
-    border: 1px solid #ccc; /* Light grey border for visual definition */
-    border-radius: 4px; /* Slightly rounded corners */
+    width: 100%; /* full width */
+    padding: 10px; /* padding inside */
+    margin-bottom: 10px; /* bottom margin */
+    border: 1px solid #ccc; /* light grey border */
+    border-radius: 4px; /* slightly rounded corners */
 }
 
 /* Styling for validators like RequiredFieldValidator and RegularExpressionValidator */
 span[id^="rfv"], span[id^="regex"], span[id^="cv"] {
-    color: #e74c3c; /* Red color for error messages */
-    display: block; /* Display as block-level element */
-    margin-bottom: 10px; /* Bottom margin for spacing from input fields */
+    color: #e74c3c; /* red color for errors */
+    display: block; /* block-level display */
+    margin-bottom: 10px; /* bottom margin */
 }
 
 /* Styling for the checkout button and return-to-home button */
 #btnCheckout, .return-to-home-button {
-    background-color: #2ecc71; /* Green background for visibility and aesthetics */
-    color: white; /* White text for contrast */
-    padding: 15px 20px; /* Padding for size and comfort */
-    border: none; /* No border for a clean button look */
-    border-radius: 20px; /* Rounded corners for a modern style */
-    font-size: 1.2em; /* Slightly larger font size for emphasis */
-    width: 100%; /* Full width to fill the container */
-    cursor: pointer; /* Pointer cursor for interactivity */
-    margin-top: 20px; /* Top margin for spacing from other elements */
+    background-color: #2ecc71; /* green background */
+    color: white; /* white text */
+    padding: 15px 20px; /* padding for size and comfort */
+    border: none; /* no border */
+    border-radius: 20px; /* rounded corners */
+    font-size: 1.2em; /* slightly larger font size */
+    width: 100%; /* full width */
+    cursor: pointer; /* pointer cursor */
+    margin-top: 20px; /* top margin */
 }

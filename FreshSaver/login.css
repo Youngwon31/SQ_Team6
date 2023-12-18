@@ -3,7 +3,7 @@
 body, html {
 	height: 100%; /* full height */
 	margin: 0; /* no margins */
-	font-family: Arial, sans-serif; /* font style */
+	font-family: Arial, sans-serif; /* font type */
 	background: white; /* white background */
 	display: flex; /* flex display */
 	align-items: center; /* vertically center items  */

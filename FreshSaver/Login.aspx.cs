@@ -2,7 +2,7 @@
 * Filename: Login.aspx.cs
 * Author: Ben Heyden, Tugrap Turker Aydiner, Jiu Kim, Youngwon Seo
 * Date: 16/12/2023
-* Description: This file contains the server-side code for the Login page of the website.
+* Description: This file contains the server logic for the Login part of our application.
 *              It handles user authentication, including validating user credentials against 
 *              a database, managing authentication tickets, and logging login attempts. 
 *              Users are redirected to their originally requested page upon successful authentication.

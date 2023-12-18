@@ -6,80 +6,80 @@
 }
 
 body, html {
-	font-family: 'Arial', sans-serif; /* Consistent, readable font */
-	background-color: #f7f7f7; /* Light grey background for a soft look */
-	color: #333; /* Dark grey text colour for better readability */
-	margin: 0;
-	padding: 0;
+	font-family: 'Arial', sans-serif; /* font type */
+	background-color: #f7f7f7; /* light grey background */
+	color: #333; /* dark grey text colour */
+	margin: 0; /* no margins */
+	padding: 0; /* no padding */
 }
 
 /* Shopping cart main container styling */
 .shopping-cart {
-	max-width: 600px; /* Maximum width for the cart container */
-	background-color: #fff; /* White background for content area */
-	margin: 20px auto; /* Centres the cart and adds vertical spacing */
-	padding: 20px; /* Padding around the cart contents */
-	border-radius: 10px; /* Rounded corners for a polished appearance */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+	max-width: 600px; /* maximum width */
+	background-color: #fff; /* white background */
+	margin: 20px auto; /* centers the cart and adds vertical spacing */
+	padding: 20px; /* padding around contents */
+	border-radius: 10px; /* rounded corners */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
 	/* Heading style for the cart page */
 	.shopping-cart h2 {
-		text-align: center; /* Centres the heading text */
-		margin-bottom: 1em; /* Space below the heading */
-		color: #333; /* Dark text colour for the heading */
+		text-align: center; /* center the text */
+		margin-bottom: 1em; /* space below heading */
+		color: #333; /* dark text colour */
 	}
 
 /* Individual cart item styling */
 .cart-item {
-	border-bottom: 1px solid #ececec; /* Light grey border for item separation */
-	padding: 10px 0; /* Vertical padding for each item */
+	border-bottom: 1px solid #ececec; /* light grey border */
+	padding: 10px 0; /* vertical padding */
 }
 
 /* Item name styling */
 .item-name {
-	font-weight: bold; /* Bold font weight for item names */
-	color: #333; /* Dark text colour for item names */
+	font-weight: bold; /* bold font */
+	color: #333; /* dark text colour */
 }
 
 /* Quantity and price styling */
 .item-quantity,
 .item-price {
-	display: block; /* Places each on a new line */
-	margin-top: 5px; /* Vertical spacing for clarity */
-	color: #555; /* Medium grey text colour for secondary information */
+	display: block; /* new line */
+	margin-top: 5px; /* vertical spacing */
+	color: #555; /* medium grey text colour */
 }
 
 /* Cart totals container styling */
 .cart-totals {
-	text-align: right; /* Aligns the total cost to the right */
-	margin-top: 20px; /* Space above the totals */
-	font-weight: bold; /* Bold font weight for total cost */
+	text-align: right; /* align text to the right */
+	margin-top: 20px; /* space above */
+	font-weight: bold; /* bold font */
 }
 
 /* Button container styling */
 .cart-buttons {
-	display: flex; /* Aligns buttons in a row */
-	justify-content: space-between; /* Distributes space between buttons */
-	margin-top: 20px; /* Space above the button container */
+	display: flex; /* align buttons in a row */
+	justify-content: space-between; /* space between buttons */
+	margin-top: 20px; /* space above */
 }
 
 /* Back to store button styling */
 .back-to-store-button {
-	padding: 10px 20px; /* Padding for clickable area */
-	background-color: #333; /* Grey background for a neutral button */
-	color: white; /* White text colour for contrast */
-	border-radius: 5px; /* Rounded corners for the button */
-	border: none; /* No border for a clean button */
-	cursor: pointer; /* Cursor changes to pointer to indicate a button */
+	padding: 10px 20px; /* padding for clickable area */
+	background-color: #333; /* grey background */
+	color: white; /* white text colour */
+	border-radius: 5px; /* rounded corners */
+	border: none; /* no border */
+	cursor: pointer; /* pointer cursor */
 }
 
 /* Checkout button styling */
 .checkout-button {
-	padding: 10px 20px; /* Padding for clickable area */
-	background-color: #333; /* Dark grey background for a prominent button */
-	color: white; /* White text colour for contrast */
-	border-radius: 5px; /* Rounded corners for the button */
-	border: none; /* No border for a clean button */
-	cursor: pointer; /* Cursor changes to pointer to indicate a button */
+	padding: 10px 20px; /* padding for clickable area */
+	background-color: #333; /* dark grey background */
+	color: white; /* white text colour */
+	border-radius: 5px; /* rounded corners */
+	border: none; /* no border */
+	cursor: pointer; /* pointer cursor */
 }

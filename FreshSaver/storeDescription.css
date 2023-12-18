@@ -1,156 +1,155 @@
 ﻿/* StoreDescription.CSS */
 
-/* Basic styling for the entire body */
 body {
-    font-family: 'Arial', sans-serif; /* Sets Arial as the font for readability */
-    margin: 0; /* Removes default margin for a clean layout */
-    background-color: #f7f7f7; /* Light grey background for a subtle, clean look */
-    color: #333; /* Dark grey text for contrast and readability */
+    font-family: 'Arial', sans-serif; /* font type */
+    margin: 0; /* no margins */
+    background-color: #f7f7f7; /* light grey background */
+    color: #333; /* dark grey text */
 }
 
 /* Style for the store details container */
 .store-details {
-    padding: 1em; /* Padding inside the container for spacing */
-    max-width: 1100px; /* Maximum width to maintain layout integrity */
-    margin: 0 auto; /* Centers the container within the parent */
-    background-color: #fff; /* White background for clarity */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners for a softer look */
+    padding: 1em; /* space inside */
+    max-width: 1100px; /* maximum width */
+    margin: 0 auto; /* center in parent */
+    background-color: #fff; /* white background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    border-radius: 8px; /* rounded corners */
 }
 
 /* Style for the store image at the top of the details */
 .store-image {
-    width: 100%; /* Full width to span across the container */
-    height: auto; /* Height adjusts to maintain aspect ratio */
-    border-top-left-radius: 8px; /* Rounded top-left corner */
-    border-top-right-radius: 8px; /* Rounded top-right corner */
+    width: 100%; /* full width */
+    height: auto; /* auto height */
+    border-top-left-radius: 8px; /* rounded top-left corner */
+    border-top-right-radius: 8px; /* rounded top-right corner */
 }
 
 /* Style for the store name text */
 .store-name {
-    font-size: 1.8em; /* Larger font size for emphasis */
-    font-weight: bold; /* Bold text for importance */
-    color: #000; /* Black color for high contrast */
-    margin: 0.5em 0; /* Margin around the name for spacing */
+    font-size: 1.8em; /* larger font size */
+    font-weight: bold; /* bold text */
+    color: #000; /* black color */
+    margin: 0.5em 0; /* space around */
 }
 
 /* Common style for address and pickup information */
 .store-address,
 .store-pickup {
-    font-size: 0.9em; /* Slightly smaller font size for subtlety */
-    color: #555; /* Medium grey color for soft contrast */
-    margin: 0.25em 0; /* Margin for spacing */
+    font-size: 0.9em; /* slightly smaller font size */
+    color: #555; /* medium grey color */
+    margin: 0.25em 0; /* space around */
 }
 
 /* Style for section headings */
 h2 {
-    font-size: 1.3em; /* Slightly larger font size for headings */
-    color: #000; /* Black color for visibility */
-    margin: 1em 0; /* Margin around heading for separation */
-    padding-bottom: 0.25em; /* Padding below heading for visual separation */
+    font-size: 1.3em; /* larger font size */
+    color: #000; /* black color */
+    margin: 1em 0; /* space around */
+    padding-bottom: 0.25em; /* space below */
 }
 
 /* Style for individual menu items */
 .menu-item {
-    display: flex; /* Flex layout for horizontal alignment */
-    align-items: center; /* Vertically centers content in the item */
-    margin-bottom: 2em; /* Margin below each item for separation */
-    background-color: #fafafa; /* Very light grey background for distinction */
-    padding: 1em; /* Padding inside each item for spacing */
-    border-radius: 8px; /* Rounded corners for a softer appearance */
+    display: flex; /* flex display */
+    align-items: center; /* vertically center items */
+    margin-bottom: 2em; /* space below */
+    background-color: #fafafa; /* very light grey background */
+    padding: 1em; /* space inside */
+    border-radius: 8px; /* rounded corners */
 }
 
 /* Style for the image within each menu item */
 .menu-item-image {
-    width: 90px; /* Fixed width for consistency */
-    height: auto; /* Auto height to maintain aspect ratio */
-    margin-right: 1em; /* Margin to the right for separation from text */
+    width: 90px; /* fixed width */
+    height: auto; /* auto height */
+    margin-right: 1em; /* space to the right */
 }
 
 /* Style for the details section within each menu item */
 .item-details {
-    display: flex; /* Flex layout for structured appearance */
-    flex-direction: column; /* Stacks content vertically */
-    width: 100%; /* Full width to use available space */
-    margin-right: 3em; /* Margin to the right for spacing */
+    display: flex; /* flex display */
+    flex-direction: column; /* stack items vertically */
+    width: 100%; /* full width */
+    margin-right: 3em; /* space to the right */
 }
 
 /* Style for the name of each menu item */
 .menu-name {
-    font-size: 1em; /* Standard font size for readability */
-    color: #000; /* Black color for contrast */
-    margin-bottom: 0.5em; /* Margin below for separation */
-    margin-right: 3em; /* Margin to the right for spacing */
+    font-size: 1em; /* standard font size */
+    color: #000; /* black color */
+    margin-bottom: 0.5em; /* space below */
+    margin-right: 3em; /* space to the right */
 }
 
 /* Style for the description of each menu item */
 .menu-description {
-    font-size: 0.9em; /* Slightly smaller font size for subtlety */
-    color: #000; /* Black color for readability */
-    margin-bottom: 0.5em; /* Margin below for separation */
-    margin-right: 3em; /* Margin to the right for spacing */
+    font-size: 0.9em; /* slightly smaller font size */
+    color: #000; /* black color */
+    margin-bottom: 0.5em; /* space below */
+    margin-right: 3em; /* space to the right */
 }
 
 /* Style for price and stock information */
 .price-info, .stock-info {
-    display: flex; /* Flex layout for horizontal alignment */
-    justify-content: space-between; /* Spaces out elements within */
-    margin-bottom: 0.5em; /* Margin below for separation */
-    margin-right: 3em; /* Margin to the right for spacing */
+    display: flex; /* flex display */
+    justify-content: space-between; /* space out elements */
+    margin-bottom: 0.5em; /* space below */
+    margin-right: 3em; /* space to the right */
 }
 
 /* Style for the original price, showing it crossed out */
 .original-price {
-    color: #999; /* Light grey color to de-emphasize */
-    margin-right: 0.5em; /* Margin to the right for separation */
-    text-decoration: line-through; /* Strikethrough to indicate discount */
+    color: #999; /* light grey color */
+    margin-right: 0.5em; /* space to the right */
+    text-decoration: line-through; /* strikethrough */
 }
 
 /* Style for the discounted price */
 .discounted-price {
-    color: #e74c3c; /* Bright red color for emphasis */
-    font-weight: bold; /* Bold text for importance */
+    color: #e74c3c; /* bright red color */
+    font-weight: bold; /* bold text */
 }
 
 /* Style for the shopping cart button */
 .shopping-cart-button {
-    display: block; /* Block display for full width */
-    background-color: #000; /* Black background for contrast */
-    color: #fff; /* White text for readability */
-    padding: 1em; /* Padding inside the button for comfort */
-    border-radius: 20px; /* Rounded corners for a modern look */
-    text-align: center; /* Centers text inside the button */
-    font-size: 1em; /* Standard font size */
-    margin-top: 1em; /* Margin above for separation */
-    cursor: pointer; /* Cursor changes to pointer to indicate clickability */
-    border: none; /* No border for a clean look */
-    width: calc(100% - 2em); /* Width adjusted for padding */
-    box-sizing: border-box; /* Includes padding and border in the width */
+    display: block; /* block display */
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
+    padding: 1em; /* space inside */
+    border-radius: 20px; /* rounded corners */
+    text-align: center; /* center text */
+    font-size: 1em; /* standard font size */
+    margin-top: 1em; /* space above */
+    cursor: pointer; /* pointer cursor on hover */
+    border: none; /* no border */
+    width: calc(100% - 2em); /* adjusted width */
+    box-sizing: border-box; /* include padding in width */
 }
 
 /* Style for the quantity control buttons */
 .quantity-controls {
-    display: flex; /* Flex layout for horizontal alignment */
-    align-items: center; /* Vertically centers content */
+    display: flex; /* flex display */
+    align-items: center; /* vertically center items */
 }
 
 /* Common style for quantity control buttons */
 .quantity-btn {
-    padding: 0.25em 0.5em; /* Padding for button size */
-    margin: 0 0.25em; /* Margin around for spacing */
-    font-size: 1em; /* Standard font size */
-    background-color: #eaeaea; /* Light grey background */
-    border: 1px solid #ccc; /* Subtle border for definition */
-    border-radius: 4px; /* Rounded corners for a softer look */
-    cursor: pointer; /* Cursor changes to pointer for interactivity */
+    padding: 0.25em 0.5em; /* space inside */
+    margin: 0 0.25em; /* space around */
+    font-size: 1em; /* standard font size */
+    background-color: #eaeaea; /* light grey background */
+    border: 1px solid #ccc; /* subtle border */
+    border-radius: 4px; /* rounded corners */
+    cursor: pointer; /* pointer cursor on hover */
 }
 
 /* Style for the add button in quantity controls */
 .add-btn {
-    color: #2ecc71; /* Green color for 'add' indication */
+    color: #2ecc71; /* green color */
 }
 
 /* Style for the remove button in quantity controls */
 .remove-btn {
-    color: #e74c3c; /* Red color for 'remove' indication */
+    color: #e74c3c; /* red color */
 }

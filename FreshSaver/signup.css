@@ -1,7 +1,7 @@
 ﻿/* signup.css */
 
 body, html {
-	height: 100%; /* full height  */
+	height: 100%; /* full height */
 	margin: 0; /* no margins */
 	font-family: Arial, sans-serif; /* font type */
 	background: #f4f4f4; /* light gray background */
@@ -27,7 +27,7 @@ body, html {
 	#signupForm input[type='email'] {
 		width: calc(100% - 20px); /* full width minus padding */
 		padding: 10px; /* put padding */
-		margin: 10px 0; /* margin around inputs */
+		margin: 10px 0; /* make 10px margin around the inputs */
 		border: 1px solid #ccc; /* light grey border */
 		border-radius: 5px; /* make the corners rounded */
 		font-size: 16px; /* make the font size 16px */
